@@ -19,11 +19,10 @@ score:
   is_scorable: No
   score_module: Static Preposition Locator
 meta_data:
-  features:
-    - Customizable
-    - Scorable
-  supported_data:
-    - Multiple Choice
+  # features:
+  #   - Customizable
+  # supported_data:
+  #   - Question/Answer
   about: >
     This is a simple widget that locates prepositions in a sentence.
 
