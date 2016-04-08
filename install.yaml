@@ -2,8 +2,8 @@
 general:
   name: Static Preposition Locator
   group: Materia
-  height: 548
-  width: 1100
+  height: 600
+  width: 1050
   in_catalog: No
   is_editable: No
   is_playable: Yes
@@ -19,13 +19,5 @@ score:
   is_scorable: No
   score_module: Static Preposition Locator
 meta_data:
-  # features:
-  #   - Customizable
-  # supported_data:
-  #   - Question/Answer
   about: >
     This is a simple widget that locates prepositions in a sentence.
-
-  # The text displayed on the widget catalog page.
-  excerpt: >
-    A basic preposition finder widget.
