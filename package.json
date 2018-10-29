@@ -4,12 +4,12 @@
     "cleanName": "static-preposition-locator"
   },
   "dependencies": {
-    "angular": "^1.7.5",
-    "angular-mocks": "^1.7.5",
-    "angular-sanitize": "^1.7.5",
+    "angular": "^1.6.9",
+    "angular-mocks": "^1.6.9",
+    "angular-sanitize": "^1.6.9",
     "jest": "^23.6.0",
     "jest-coffee-preprocessor": "^1.0.0",
-    "materia-widget-development-kit": "2.0.0"
+    "materia-widget-development-kit": "^2.0.0"
   },
   "scripts": {
     "start": "webpack-dev-server",
@@ -26,11 +26,10 @@
     },
     "moduleFileExtensions": [
       "coffee",
-      "js",
-      "json"
+      "js"
     ],
     "collectCoverageFrom": [
-      "src/**/*.js"
+      "src/**/*.coffee"
     ],
     "coverageThreshold": {
       "global": {
@@ -42,6 +41,6 @@
   },
   "version": "1.0.0",
   "author": "University of Central Florida, Center for Distributed Learning",
-  "description": "This is used to locate 'be' verbs such as 'be', 'am', 'being' etc. in any block of text.",
+  "description": "This is used to locate prepositions in any block of text.",
   "license": "AGPL-3.0"
 }
