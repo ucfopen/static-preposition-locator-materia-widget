@@ -1,6 +1,6 @@
 staticPrepLocator = angular.module 'staticPrepLocator', ['ngSanitize']
 
-staticPrepLocator.controller "staticPrepLocatorCtrl", ($scope) ->
+staticPrepLocator.controller "staticPrepLocatorCtrl", ['$scope', ($scope) ->
 
 	$scope.input = ''
 	$scope.output = ''
@@ -19,3 +19,4 @@ staticPrepLocator.controller "staticPrepLocatorCtrl", ($scope) ->
 	$scope.resetText = ->
 		$scope.input = ''
 		$scope.output = ''
+]
