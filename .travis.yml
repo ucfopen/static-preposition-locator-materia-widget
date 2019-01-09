@@ -1,0 +1,29 @@
+language: node_js
+node_js:
+- '6'
+cache:
+  yarn: true
+  directories:
+  - node_modules
+before_install:
+- npm config set spin false
+- npm install -g npm@^5
+script:
+- yarn test-ci
+- yarn build
+deploy:
+  skip_cleanup: true
+  provider: releases
+  api_key:
+    secure: "YiTyN6wV6H9+uqJGDLK85MeeyCqdbISoylRnD6bvFIAj/ciGfUkoPtPo4qStM2rgA5CpwYIenuWpnRgmThWHdo9Dxw/70AssNR21HsqiybCcsBskYwoZJRG5Kgx74WPWTnvEIXXi3CZrOo8fzWeUJ8iqRGIhZNOjzhiMq72Ab18AVcmjTHCPDQWhob2fZ6+5/gFnxXO1Y7nIVlA8StLBrB5jYspxG/DrQ47njS4uKCGDNbxcADrbrhF05z/Uq7InFRRtHdo8ISX8+UFa6gUXqRZOPYkAfhi2upNCJjGlxmozcVVCMSmsoABcsqXacrOC96xrUbjW0p1RfvtnDzUAuonRmXG4x+7BDmL/iE6rvP2ZnYpC2rpGkO3PgqhRFkjEbP/wUKDw6cFN66rxYtLqx+2gkTRyRmManacDmb8HkowbV5pC9+S3HnzfPN7F+3uv+mo9TvA9tngiaDaFQlboYZNAru9+2yWnXsvN7oobB32r8FrGBsBd0WSv0KBHEQ57BcMFvX9/tyo7JdeckhJZHDVRF72g3AbMUryq2NzoHGa08fEH8615x9m25I3Zo2x9qxHEiBeYVjcm/003/x2HiQeDVzS0Bk5BBNcKDEdwnKZms+Wlj3vAbmJiDFVAvX4F3CqdhN+p26LwvWVGah5raMB3Txs5NTcrJpnW8FQIICA="
+  file:
+    - build/_output/static-preposition-locator.wigt
+    - build/_output/static-preposition-locator-build-info.yml
+  on:
+    tags: true
+    repo: ucfopen/static-preposition-locator-materia-widget
+notifications:
+  email: false
+  slack:
+    secure: "UqxhQ/i4R9h7yItq2HO58OjF0mjqWnV4IfQ3D6I7jWzS6a+zOhqRFjRf4PVS6Md4vcmympXu2D8pYxafcthGsF58tbcIo6SUoThDkc6fExzPOdGYfX8S01iUMBnQO/Z88/AmZmfmSbNz+cB7YLQagfrCyEYuaaWWWnAawORnfMJX3IVKmT9IvZNyUkU/uJMgFqIGcVHb+fJwAfzP2LVWSrfqHzMCeQUazH47duuLjEvDHNE8L2Rvdm6Xk/ewaKKjF5vq5hZ7YOA4fzoVO5gXsQcBO+XYVWaYEQQMcnqzAue6kvCr2cobCC63sdC3unFBskk8i+il0EF+ARb6wTqaNZKX6FIoWM8GrabaQ2caFHOti9eVH35wq2kgvYEWzciBXvtZzMAOJR/TtEVoqkLKGzoCk2USfnEO1izUJ1BrnsDodDURMX9zwTqxjdNfEHAWJ/ZDaP5okG7Zks8TA3hJ5CcAquGRbXjAC+u6fZ5ZN1NWcQgbJHnIMHoDaGqTAlsebv04iEBObkZTg6C3cNw1SQRJPz2xo48OeSnc+oSoD954u4gMxmoLxHcQvLoaV4Q8cSaSJTotFqJiEjs/u9yKpNh2dXpHOs0erpp71gBx5rIcVauZB/mduATANL7qOm7m8eYYWzIE7nbOhFJokWosD+b07Ohlnr7V+g0vXb7uQWM="
+
